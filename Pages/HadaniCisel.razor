@@ -1,0 +1,37 @@
+﻿@page "/hra"
+<h3>HadaniCisel</h3>
+<input @bind-value=hadaneCislo @bind-value:event="oninput" />
+<button @onclick="Hadam">Hádám</button>
+
+<div>@hlaska</div>
+
+@code {
+    Random rnd = new Random();
+    int nahodne_cislo;
+    int hadaneCislo;
+    
+    string? hlaska;
+
+    protected override void OnInitialized()
+    {
+        nahodne_cislo  = rnd.Next(1, 101);
+    }
+
+    protected void Hadam()
+    {
+        if(nahodne_cislo == hadaneCislo)
+        {
+            hlaska = "Vyhrál jsi";
+        }
+        else if (nahodne_cislo < hadaneCislo)
+        {
+            hlaska = "Moje číslo je menší";
+        }
+        else if (nahodne_cislo > hadaneCislo)
+        {
+            hlaska = "Moje číslo je větší";
+        }
+    }
+
+    
+}
