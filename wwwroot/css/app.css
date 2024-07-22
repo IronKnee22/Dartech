@@ -30,3 +30,22 @@ h1:focus {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.nadpis {
+    background-color: red;
+}
+
+
+.center_gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20%; /*tohle je takové provizorní případně změnit*/
+}
+
+.center {
+    padding: 300px 0; /*Tohle je takový že to budu muset ještě asy dodělat aby to vypadalo nějak normálně*/
+    text-align: center;
+}
+
+
